@@ -227,7 +227,7 @@ header {
   font-size: 1.1rem;
   font-weight: 700;
   color: #F8FBF1;
-  background-color: #C5C5A2;
+  background-color: #C5C5A9;
   border: none;
   border-radius: 35px;
   cursor: pointer;
@@ -235,7 +235,7 @@ header {
 }
 
 .ligne button:hover {
-  background-color: #C5C5A9;
+  background-color: #A3A38E;
 }
 
 /* Illustration */
