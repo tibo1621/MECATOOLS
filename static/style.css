@@ -92,19 +92,25 @@ header {
 /* ------------------------------
    🔽 Menu déroulant (sous-menu)
 -------------------------------- */
+
+/* Conteneur du sous-menu */
 .dropdown {
-  position: relative;
+  position: relative;         /* Permet de positionner .dropdown-content en absolu */
 }
 
+/* Sous-menu caché par défaut */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #C5C5A9;
+  background-color: #C5C5A9;  /* Même fond que la navbar */
   min-width: 200px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* Ombre pour le sous-menu */
+  padding: 0;
+  margin: 0;
+  z-index: 1;                 /* S’affiche par-dessus les autres éléments */
 }
 
+/* Liste des liens dans le sous-menu */
 .dropdown-content li {
   list-style: none;
 }
@@ -116,11 +122,13 @@ header {
   text-decoration: none;
 }
 
+/* Survol d’un lien dans le sous-menu */
 .dropdown-content li a:hover {
-  background-color: #5B696B;
+  background-color: #5B696B;  /* Fond au survol */
   color: white;
 }
 
+/* Affichage du sous-menu au survol */
 .dropdown:hover .dropdown-content {
   display: block;
 }
