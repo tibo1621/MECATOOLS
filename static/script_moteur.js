@@ -1,5 +1,3 @@
-let monGraphique = null;
-
 document.getElementById("btnCalcul").addEventListener("click", function () {
   // Récupérer les valeurs
   const masse = parseFloat(document.getElementById("masse").value);
