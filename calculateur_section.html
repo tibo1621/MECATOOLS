@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Dimensionnement section</title>
+  <link rel="stylesheet" href="static/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <header>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="static/logo.svg" alt="Logo" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li class="dropdown">
+            <a href="#">Calcul</a>
+            <ul class="dropdown-content">
+              <li><a href="calculateur_moteur.html">Calculateur moteur</a></li>
+              <li><a href="calculateur_reducteur.html">Calculateur reducteur</a></li>
+              <li><a href="calculateur_batterie.html">Calculateur batterie</a></li>
+              <li><a href="calculateur_section.html">Calculateur section</a></li>
+            </ul>
+          </li>
+      <li><a href="propos.html">A propos</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <section id="titre">
+    <h1>Dimensionnement section de fils</h1>
+  </section>
+
+  <main id="para">
+    <section id="Parametre">
+      <h2>Paramétrage</h2>
+
+      <div class="ligne">
+        <label for="courant">Courant consomé (A) :</label>
+        <input type="number" id="nb_courant" name="nb_courant" min="1" />
+      </div>
+
+      <div class="ligne">
+        <label for="tension">Tension (V) :</label>
+        <input type="number" id="tension" name="tension" step="0.1" />
+      </div>
+
+      <div class="ligne">
+        <label for="longueur">Longueur (m) :</label>
+        <input type="number" id="longueur" name="longueur" step="0.1" />
+      </div>
+
+      <div class="ligne">
+        <button id="btnCalcul" type="button">Calculer</button>
+      </div>
+
+    </section>
+
+    <section id="Illustration">
+      <h2>Illustration</h2>
+      <img src="static/vehicule.png" alt="Illustration batterie" />
+    </section>
+
+  </main>
+
+  <section id="resu">
+    <section id="Resultat">
+  <h2>Résultats</h2>
+  <div class="resultats-grid">
+    <div class="ligne-resultat">
+      <label for="section">Section de cable (mm²) :</label>
+      <input type="text" id="section" readonly />
+    </div>
+  </div>
+</section>
+
+  </section>
+
+  <script src="static/script_section.js"></script>
+</body>
+</html>
