@@ -15,9 +15,10 @@ document.getElementById("btnCalcul").addEventListener("click", function () {
 
   // Calculs intermédiaires
   const reduction = (rotation * Math.PI * (diametre/100)) / (60 * vitesse);
+  const reductionRatio = Math.round(reduction);
 
   // Affichage résultats dans les inputs
-  document.getElementById("reduction").value = reduction.toFixed(2);
+  document.getElementById("reduction").value = `${reductionRatio}:1`;
 
   // Afficher la section résultats si cachée
   const sectionResu = document.getElementById("resu");
