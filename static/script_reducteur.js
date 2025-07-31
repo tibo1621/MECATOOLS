@@ -1,22 +1,23 @@
 document.getElementById("btnCalcul").addEventListener("click", function () {
   // Récupérer les valeurs
-  const courant = parseFloat(document.getElementById("courant").value);
-  const temps = parseFloat(document.getElementById("temps").value);
+  const vitesse = parseFloat(document.getElementById("vitesse").value);
+  const rotation = parseFloat(document.getElementById("rotation").value);
+  const diametre = parseFloat(document.getElementById("diametre").value);
 
 
   // Vérification des valeurs
   if (
-    isNaN(courant) || isNaN(temps)
+    isNaN(vitesse) || isNaN(rotation) || isNaN(diametre)
   ) {
     alert("Veuillez remplir correctement tous les champs nécessaires.");
     return;
   }
 
   // Calculs intermédiaires
-  const capacite = courant * (temps/60);
+  const reduction = (rotation * Math.PI * diametre) / (60 * vitesse);
 
   // Affichage résultats dans les inputs
-  document.getElementById("capacite").value = capacite.toFixed(2);
+  document.getElementById("reduction").value = reduction.toFixed(2);
 
   // Afficher la section résultats si cachée
   const sectionResu = document.getElementById("resu");
