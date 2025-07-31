@@ -13,6 +13,10 @@ document.getElementById("btnCalcul").addEventListener("click", function () {
     return;
   }
 
+  // Constantes
+  const resistivite = 0.017; // résistivité cuivre (Ω·mm²/m)
+  const chute_tension = 0.05 * tension; // chute de tension admissible (5% de la tension)
+  
   // Calculs intermédiaires
   const section = (2 * longueur * nb_courant * resistivite) / chute_tension;
 
