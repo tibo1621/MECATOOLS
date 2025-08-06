@@ -248,6 +248,7 @@ header {
 
 /* Illustration */
 #Illustration img {
+  width: 100%;
   max-width: 500px;
   height: auto;
   border-radius: 40px;
@@ -304,5 +305,6 @@ header {
   pointer-events: none;
   user-select: none;
 }
+
 
 
